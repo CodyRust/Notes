@@ -9,12 +9,14 @@
 	// Get categories from database
 	$result = mysqli_query($con,"SELECT * FROM categories");
 	while($row = mysqli_fetch_array($result)) {
-		$categories .= '<li><a href="' . $domain . '/index.php?category=' . $row['id'] . '">' . $row['title'] . '</a></li>';
+		if ($row['parent'] == NULL) {
+			$categories .= '<li><a class="category-list" href="' . $domain . '/index.php?category=' . $row['id'] . '">' . $row['title'] . '</a></li>';
+		}
 	}
 
 	// Format content for output
 	$content = '
-		<ul>
+		<ul class="nav-list">
 		' . $categories . '
 		</ul>
 	';
