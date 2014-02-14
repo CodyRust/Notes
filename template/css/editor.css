@@ -1,0 +1,150 @@
+html, body, div, span,  h1, h2, h3, h4, h5, h6, p, blockquote, pre,  a, abbr, acronym, address, big, cite, code,  img, ins, kbd, q, s, samp,  small, strike, strong,  dl, dt, dd, ol, ul, li,  fieldset, form, label, legend,  table, caption, tbody, tfoot, thead, tr, th, td {     margin: 0;
+     padding: 0;
+     border: 0;
+     outline: 0;
+     font-size: 100%;
+     vertical-align: top;
+     background: transparent;
+     font-weight:normal;
+}
+
+body {
+     line-height: 1;
+}
+
+ol, ul {
+     list-style: none;
+}
+
+blockquote, q {
+     quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+     content: '';
+     content: none;
+}
+
+table {
+     border-collapse: collapse;
+     border-spacing: 0;
+}
+
+/* restart ends */
+
+html {
+	background: #202021;
+	padding: 48px 45px 20px 45px;
+}
+
+@media only screen and (max-width: 586px) {
+	html {
+		padding: 10px !important;
+	}
+}
+
+.mce-content-body {
+	background: transparent;
+}
+
+p, h1, h2, h3, h4, h5, h6, li, blockquote, div, pre {
+	font-family: 'Asap', sans-serif;
+	font-size: 16px;
+	line-height: 26px;
+	background: transparent;
+	color: #dbdbdb;
+	margin-bottom: 26px;
+}
+
+div, pre {
+	padding: 15px 22px !important;
+	border: 1px solid #888 !important;
+}
+
+pre {
+	background: #333;
+	font-family: 'Ubuntu Mono', monospace;
+	overflow: auto;
+	line-height: 20px;
+	-webkit-tab-size: 4;
+	-moz-tab-size: 4;
+	-ms-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+}
+
+h1 {
+	font-size: 40px;
+	line-height: 40px;
+	color: #8f9d6a;
+}
+
+h2 {
+	font-size: 36px;
+	line-height: 36px;
+	color: #7587a6;
+}
+
+h3 {
+	font-size: 32px;
+	line-height: 32px;
+	color: #e0c589;
+}
+
+h4 {
+	font-size: 28px;
+	line-height: 28px;
+	color: #cf6a4c;
+}
+
+h5 {
+	font-size: 24px;
+	line-height: 24px;
+	color: #9b703f;
+}
+
+h6 {
+	font-size: 20px;
+	line-height: 20px;
+	color: #f9ee98;
+}
+
+strong {
+	font-weight: 700;
+	color: #fff;
+}
+
+em {
+	font-style: 700;
+	color: #666;
+}
+
+ol, ul {
+	margin-bottom: 26px;
+}
+
+ol li {
+	color: #999;
+	margin: auto auto auto 45px;
+	list-style-type: decimal;
+}
+
+ul li {
+	color: #999;
+	margin: auto auto auto 45px;
+	list-style-type: disc;
+}
+
+blockquote {
+	margin-left: 45px;
+}
+
+a, a:visited {
+	color: #7391d4;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #9bb7f4;
+	cursor: pointer;
+}
