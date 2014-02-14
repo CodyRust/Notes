@@ -1,29 +1,44 @@
 <?php
 
-	$con=mysqli_connect('localhost', 'root', '', 'notes');
-	$domain = '/Notes';
+	include 'includes/configuration.php';
+	include 'includes/database.php';
 
-	if (isset($_POST['save'])) {
-		$note = mysqli_real_escape_string($con, htmlspecialchars($_POST['note']));
-		mysqli_query($con,"UPDATE notes SET content = '$note' WHERE id = '1'");
-		header('Location: ' . $domain);
+	// Obtain page information
+	if (isset($_GET['page'])) {
+		$page = $_GET['page'];
+	} else {
+		$page = '';
 	}
 
-	$result = mysqli_query($con,"SELECT * FROM notes");
-	while($row = mysqli_fetch_array($result)) {
-		$note = $row['content'];
+	if (isset($_GET['category'])) {
+	// View a specific category
+
+		// Define category id
+		$catId = $_GET['category'];
+
+		include 'includes/category.php';
+
+	} else if (isset($_GET['note'])) {
+	// View a specific note
+
+		// Define note id
+		$noteId = $_GET['note'];
+
+		// Include note compiler
+		include 'includes/getnote.php';
+
+	} else if ($page == '') {
+	// Default view - home page
+
+		include 'includes/homepage.php';
+
+	} else if ($page == 'category') {
+	// Create new category
+
+
 	}
 
-	mysqli_close($con);
-
-	$content = '
-	<form method="post" action="' . $domain . '/index.php">
-		<textarea name="note">
-		 ' . $note . '
-		</textarea>
-		<input type="button" id="sync-button" value="sync" onclick="window.location = \'' . $domain . '\'" /><input type="submit" id="save-button" name="save" value="save note" />
-	</form>';
-
+	// Include template file for display
 	include 'template/index.php';
 
 ?>

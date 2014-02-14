@@ -61,3 +61,58 @@ textarea {
 	background: #aabad5;
 	cursor: pointer;
 }
+
+p, h1, h2, h3, h4, h5, h6, li, blockquote, div, pre {
+	font-family: 'Asap', sans-serif;
+	font-size: 16px;
+	line-height: 26px;
+	background: transparent;
+	color: #dbdbdb;
+	margin-bottom: 26px;
+}
+
+h1 {
+	font-size: 40px;
+	line-height: 40px;
+	color: #8f9d6a;
+}
+
+h2 {
+	font-size: 36px;
+	line-height: 36px;
+	color: #7587a6;
+}
+
+h3 {
+	font-size: 32px;
+	line-height: 32px;
+	color: #e0c589;
+}
+
+h4 {
+	font-size: 28px;
+	line-height: 28px;
+	color: #cf6a4c;
+}
+
+h5 {
+	font-size: 24px;
+	line-height: 24px;
+	color: #9b703f;
+}
+
+h6 {
+	font-size: 20px;
+	line-height: 20px;
+	color: #f9ee98;
+}
+
+a, a:visited {
+	color: #7391d4;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #9bb7f4;
+	cursor: pointer;
+}
