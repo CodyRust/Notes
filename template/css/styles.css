@@ -47,8 +47,9 @@ textarea {
 #sync-button {
 	position: fixed;
 	bottom: 0px;
-	right: 120px;
+	right: 121px;
 	border: none;
+	width: 50px;
 	height: 39px;
 	background: #7587a6;
 	font-family: 'Asap', sans-serif;
@@ -58,6 +59,24 @@ textarea {
 }
 
 #sync-button:hover {
+	background: #aabad5;
+	cursor: pointer;
+}
+
+#back-button {
+	position: fixed;
+	bottom: 0px;
+	right: 172px;
+	border: none;
+	height: 39px;
+	background: #7587a6;
+	font-family: 'Asap', sans-serif;
+	font-size: 16px;
+	color: #fff;
+	padding: 0px 15px;
+}
+
+#back-button:hover {
 	background: #aabad5;
 	cursor: pointer;
 }

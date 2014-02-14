@@ -10,6 +10,7 @@
 	while($row = mysqli_fetch_array($result)) {
 		$note = $row['content'];
 		$id = $row['id'];
+		$catid = $row['catid'];
 	}
 
 	// Format content for output
@@ -19,7 +20,9 @@
 		 ' . $note . '
 		</textarea>
 		<input type="hidden" name="id" value="' . $id . '" />
-		<input type="button" id="sync-button" value="sync" onclick="window.location = \'' . $domain . '/index.php?note=' . $id . '\'" /><input type="submit" id="save-button" name="save" value="save note" />
+		<input type="button" id="back-button" value="back to category" onclick="window.location = \'' . $domain . '/index.php?category=' . $catid . '\'" />
+		<input type="button" id="sync-button" value="sync" onclick="window.location = \'' . $domain . '/index.php?note=' . $id . '\'" />
+		<input type="submit" id="save-button" name="save" value="save note" />
 	</form>';
 
 ?>
